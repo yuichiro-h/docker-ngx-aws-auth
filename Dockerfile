@@ -17,6 +17,7 @@ RUN apk --update add curl build-base openssl-dev zlib-dev pcre-dev \
  		--user=nginx \
  		--group=nginx \
  		--with-http_ssl_module \
+        --with-http_auth_request_module \
  		--with-http_gzip_static_module \
         --add-module=/src/ngx_aws_auth-${NGINX_AWS_AUTH_VERSION} \
     && make \
